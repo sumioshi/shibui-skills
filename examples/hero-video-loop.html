@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shibui Hero Video Loop Example</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        .hero-loop-video {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-neutral-950 text-white antialiased">
+    <section
+      class="relative isolate flex min-h-[88vh] items-center overflow-hidden bg-neutral-950 px-6 py-24"
+    >
+      <!-- Replace src & poster with any loop from https://shibui.build/backgrounds -->
+      <video
+        class="hero-loop-video pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
+        autoplay
+        loop
+        muted
+        playsinline
+        poster="/poster.webp"
+        src="https://media.shibui.build/example-loop.mp4"
+      ></video>
+
+      <!-- Editorial scrim for guaranteed AA/AAA contrast -->
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 -z-10 bg-gradient-to-b from-black/65 via-black/45 to-neutral-950"
+      ></div>
+
+      <div class="mx-auto w-full max-w-5xl space-y-6">
+        <p class="text-xs font-medium tracking-widest text-white/75 uppercase">
+          Studio Architecture · Curitiba & São Paulo
+        </p>
+        <h1 class="max-w-3xl text-4xl font-semibold tracking-tight sm:text-6xl">
+          Arquitetura residencial pensada para atravessar décadas
+        </h1>
+        <p class="max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg">
+          Projetos autorais com luz natural, matéria-prima honesta e acompanhamento técnico do estudo preliminar à entrega das chaves.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a
+            href="#contato"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-neutral-950 transition-transform duration-150 hover:opacity-95 active:scale-[0.99]"
+          >
+            Agendar conversa inicial
+          </a>
+          <a
+            href="https://shibui.build/backgrounds"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/25 px-5 py-2.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-white/10"
+          >
+            Explorar backgrounds
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
